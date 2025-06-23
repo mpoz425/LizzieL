@@ -21,4 +21,64 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+}
+
+/* Custom responsive styles */
+@layer components {
+  .hero-title {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight;
+  }
+
+  .hero-subtitle {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+  }
+
+  .content-text {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+
+  .nav-container {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .section-container {
+    @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+
+  .card-grid {
+    @apply grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .card {
+    @apply bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow;
+  }
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 640px) {
+  .hero-section {
+    @apply text-center;
+  }
+
+  .nav-links {
+    @apply flex-col space-y-2;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-section {
+    @apply text-left;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  .hero-section {
+    @apply text-left;
+  }
 } 
