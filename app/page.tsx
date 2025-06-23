@@ -10,8 +10,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero-section section-container">
         <div className="max-w-7xl mx-auto">
-          <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
-            <div className="col-span-12 lg:col-span-7 mb-12 lg:mb-0">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+            <div className="order-2 lg:order-1 col-span-12 lg:col-span-7 mb-12 lg:mb-0">
               <h1 className={`${courier.className} hero-title text-slate-800`}>
                 <span className="block mb-2">Lizzie Li</span>
                 <span className="block text-blue-600 hero-subtitle">PhD Student & Researcher</span>
@@ -43,7 +43,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="col-span-12 lg:col-span-5">
+            <div className="order-1 lg:order-2 col-span-12 lg:col-span-5 mb-8 lg:mb-0">
               <div className="relative mx-auto max-w-md lg:max-w-full">
                 <div className="relative block w-full bg-blue-50 rounded-lg overflow-hidden aspect-square">
                   <Image
